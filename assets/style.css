@@ -9,6 +9,7 @@ body{
     height: 500px;
     display: flex;
     font-family: system-ui;
+    border-radius: 20px;
 
 }
 .slide-under{
@@ -22,6 +23,7 @@ i{
     padding-top: 20px;
     padding-left: 520px;
     font-size: 35px;
+    user-select: none;
 }
 .foward{
     padding-left: 10px;
@@ -30,7 +32,7 @@ i{
 
 .images{
     height: 480px;
-    margin-top: auto;
+    top: 110px;
     width:auto;
     margin: auto;
     display: flex;
@@ -43,6 +45,7 @@ i{
     margin-right: 20px;
     background-size: cover;
     width: 300px;
+    border-radius: 20px;
 }
 .img1{
     background-image: url("images/img1.jpg");
@@ -72,4 +75,38 @@ i{
     background-image: url("images/img6.jpg");
     order:6;
 
+}
+
+/* Backward */
+.hvr-backward {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.hvr-backward:hover, .hvr-backward:focus, .hvr-backward:active {
+  -webkit-transform: translateX(-8px);
+  transform: translateX(-8px);
+}
+
+/* Forward */
+.hvr-forward {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.hvr-forward:hover, .hvr-forward:focus, .hvr-forward:active {
+  -webkit-transform: translateX(8px);
+  transform: translateX(8px);
 }

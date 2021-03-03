@@ -8,38 +8,37 @@ $(".foward").click(moveFoward);
 function moveFoward() {
     let firstImg = cellArray[0];
     let lastImg = cellArray[5];
-    let lastImgOrder = parseInt($(lastImg).css("order"));  //   6
-    let moveValue = parseInt($(".images").css("left"));   // 
-    $(".images").css("left", `${moveValue - 320}px`);
+    let lastImgOrder = parseInt($(lastImg).css("order"));
+    let moveValue = parseInt($(".images").css("left"));
+    $(".images").animate({ left: `${moveValue - 320}px` }, 900);
+    $(".foward").unbind("click");
+    $(".backward").unbind("click");
     setTimeout(function () {
         $(firstImg).css("order", lastImgOrder + 1);
+        $(".images").css("left", `${moveValue}px`);
         cellArray.push(cellArray[0]);
         cellArray.shift();
-    }, 5000)
-
+        $(".foward").click(moveFoward);
+        $(".backward").click(moveBackward);
+    }, 920);
 }
 
 
 $(".backward").click(moveBackward);
 function moveBackward() {
-    let firstImg = document.getElementsByClassName("a")[0];
-    let lastImg = document.getElementsByClassName("a")[5];
+    let firstImg = cellArray[0];
+    let lastImg = cellArray[5];
+    let firstImgOrder = parseInt($(firstImg).css("order"));
     let moveValue = parseInt($(".images").css("left"));
-    $(".images").css("left", `${moveValue + 320}px`);
+    $(lastImg).css("order", firstImgOrder - 1);
+    $(".images").css("left", `${moveValue - 320}px`)
+    $(".images").animate({ left: `${moveValue}px` }, 900);
+    $(".foward").unbind("click");
+    $(".backward").unbind("click");
+    cellArray.unshift(cellArray[5]);
+    cellArray.pop();
+    setTimeout(function () {
+        $(".foward").click(moveFoward);
+        $(".backward").click(moveBackward);
+    }, 920);
 }
-
-
-
-
-
-// let firstImg = 0;
-// function moveFoward() {
-//     $(imgArray[firstImg]).css("order", "1");
-//     firstImg++;
-//     if (firstImg === 6) {
-//         firstImg = 0;
-//         for (i = 0; i < 6; i++) {
-//             $(imgArray[i]).css("order", "initial");
-//         }
-//     }
-// }
