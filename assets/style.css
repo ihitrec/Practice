@@ -35,13 +35,13 @@ body{
     width:auto;
     margin: auto;
     display: flex;
-    gap: 20px;
 }
 .a{
     height: 480px;
     background-size: cover;
     width: 300px;
     border-radius: 20px;
+    margin-right: 20px;
 }
 .img1{
     background-image: url("images/img1.jpg");
