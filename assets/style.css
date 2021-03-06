@@ -36,7 +36,7 @@ body{
     margin: auto;
     display: flex;
 }
-.a{
+.slideshow-images div{
     height: 480px;
     background-size: cover;
     width: 300px;
@@ -120,7 +120,7 @@ body{
 .slideshow-images{
     margin-left: 20px;
 }
-.a{
+.slideshow-images div{
     width: 258px;
     height: 422px;
 }

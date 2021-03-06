@@ -10,7 +10,7 @@ function moveFoward() {
     let lastImg = cellArray[5];
     let lastImgOrder = parseInt($(lastImg).css("order"));
     let moveValue = parseInt($(".slideshow-images").css("margin-left"));
-    let imgWidth = parseInt($(".img1").css("width")) + 20;
+    let imgWidth = parseInt($(".slideshow-images div").css("width")) + 20;
     $(".slideshow-images").animate({ marginLeft: `${moveValue - imgWidth}px` }, 900);
     $(".foward").unbind("click");
     $(".backward").unbind("click");
@@ -31,7 +31,7 @@ function moveBackward() {
     let lastImg = cellArray[5];
     let firstImgOrder = parseInt($(firstImg).css("order"));
     let moveValue = parseInt($(".slideshow-images").css("margin-left"));
-    let imgWidth = parseInt($(".img1").css("width")) + 20;
+    let imgWidth = parseInt($(".slideshow-images div").css("width")) + 20;
     $(lastImg).css("order", firstImgOrder - 1);
     $(".slideshow-images").css("margin-left", `${moveValue - imgWidth}px`)
     $(".slideshow-images").animate({ marginLeft: `${moveValue}px` }, 900);
