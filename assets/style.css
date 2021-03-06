@@ -3,41 +3,34 @@ body{
     background-color: ghostwhite;
 
 }
-.main-container{
+.slideshow-container{
     margin-top: 100px;
     display: flex;
     font-family: system-ui;
-    border-radius: 20px;
     overflow: hidden;
-
-
 }
-.slide-under{
+.slideshow-text{
     width: 40%;
     background-color: ghostwhite;
-    z-index: 1;
     height: 500px;
+    z-index:1;
 }
-h3 , h1, p,i{
+.slideshow-text > *{
     padding: 1% 7%;
 }
-.buttons{
+.slideshow-text h3{
+    width: 40vw;
+}
+.slideshow-buttons{
     margin-top: 40px;
     margin-left: 68%;
     width: 110px;
-}
-h3{
-    width: 40vw;
-}
-i{
     font-size: 35px;
     user-select: none;
 }
-/* .foward{
-} */
 
 
-.images{
+.slideshow-images{
     height: 480px;
     width:auto;
     margin: auto;
@@ -116,15 +109,19 @@ i{
 
 
 @media only screen and (max-width:875px){
-.main-container{
+.slideshow-container{
     flex-wrap: wrap;}
 
-.slide-under{
+.slideshow-text{
     width: 95%;
     height: auto;
     margin-bottom: 25px;
 }
-.images{
+.slideshow-images{
     margin-left: 20px;
+}
+.a{
+    width: 258px;
+    height: 422px;
 }
 }
