@@ -1,6 +1,6 @@
 body{
     margin: 0;
-    background-color: ghostwhite;
+    background-color: red;
 
 }
 .slideshow-container{
@@ -33,6 +33,7 @@ body{
     padding-right: 10px;
     transition: all 0.4s ease-in-out;
     cursor: pointer;
+    user-select:none;
 }
 .hvr-backward:hover {
     margin-left: -10px;
@@ -41,7 +42,6 @@ body{
 .hvr-forward{
     transition: all 0.4s ease-in-out;
     cursor: pointer;
-
 }
 .hvr-forward:hover{
     padding-left: 10px;
